@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>
+	    <property name="javax.persistence.validation.mode">none</property>
+		<property name="hibernate.connection.characterEncoding">utf-8</property>
+	    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+	    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://114.212.83.171:3306/zjtest?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+	     
+	    <property name="hibernate.connection.pool.size">100</property>  <!--数据库连接池的大小--> 
+	    <property name="jdbc.fetch_size">50 </property> <!-- Hibernate每次从数据库中取出并放到JDBC的Statement中的记录条数 -->
+		
+		<property name="c3p0.min_size">1</property> <!--在连接池中可用数据库连接的最小数目 -->
+		<property name="c3p0.max_size">50</property> <!--在连接池中所有数据库连接的最大数目 -->
+		<property name="c3p0.time_out">18000</property> <!--设定数据库连接的超时时间 -->
+		<property name="c3p0.max_statement">10</property> <!--可以被缓存的PreparedStatement的最大数目 -->
+		<property name="c3p0.maxIdleTime">1800</property>
+		
+		<property name="Connection.useUnicode">true </property> 
+		<property name="connection.characterEncoding">UTF-8</property>
+		
+		<property name="hibernate.hbm2ddl.auto">update</property> <!-- 自动建表功能 -->
+			
+		<!-- List of XML mapping files -->
+		<mapping resource="com/iip/nju/model/WebDataBean.hbm.xml" />
+		<mapping resource="com/iip/nju/model/AttachmentBean.hbm.xml" />
+
+
+	</session-factory>
+</hibernate-configuration>

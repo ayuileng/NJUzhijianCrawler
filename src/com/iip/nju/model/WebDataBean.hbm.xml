@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.iip.nju.model.WebDataBean" table="ZHIJIAN_WEBDATA">
+        <id name="id"  column="ZJ_ID" type="integer">
+            <generator class="increment"/>
+        </id>
+        <property name="url" column="ZJ_URL" type="java.lang.String" />
+        <property name="title" column="ZJ_TITLE" type="java.lang.String" />
+        <property name="content" column="ZJ_CONTENT" type="text" />
+        <property name="date" column="ZJ_DATE" type="timestamp" />
+        <property name="dataSource" column="ZJ_DATASOURCE" type="java.lang.String" length="1024"/>
+        <property name="rawHTML" column="ZJ_HTML" type="text"/>
+    </class>
+</hibernate-mapping>

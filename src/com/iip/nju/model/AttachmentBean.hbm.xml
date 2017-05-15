@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.iip.nju.model.AttachmentBean" table="ZHIJIAN_ATTACHMENT">
+        <id name="id"  column="AT_ID" type="integer">
+            <generator class="increment"/>
+        </id>
+        <property name="name" column="AT_NAME" type="java.lang.String" />
+        <property name="shangbiao" column="AT_SHANGBIAO" type="java.lang.String"  />
+        <property name="guigexinghao" column="AT_GGXH" type="java.lang.String" />
+        <property name="birthday" column="AT_SCRQ" type="java.lang.String" />
+        <property name="factoryName" column="AT_QYMC" type="java.lang.String" />
+        <property name="factoryAddress" column="AT_QYDZ" type="java.lang.String" />
+        <property name="result" column="AT_JYJG" type="java.lang.String" />
+        <property name="errorReason" column="AT_BHGYY" type="java.lang.String" />
+        <property name="chengjianjigou" column="AT_CJJG" type="java.lang.String" />
+    </class>
+</hibernate-mapping>
